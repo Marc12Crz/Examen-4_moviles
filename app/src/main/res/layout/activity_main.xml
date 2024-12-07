@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.camera.view.PreviewView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/preview"/>
+    <Button
+        android:id="@+id/img_capture_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Take a photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/switch_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Switch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_capture_btn"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/gallery_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Gallery"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_capture_btn" />
+
+    <!-- Este layout utiliza ConstraintLayout para organizar los elementos de la interfaz de usuario. Incluye un PreviewView para mostrar la cámara en pantalla completa y tres botones.
+         1. 'img_capture_btn': Botón para tomar fotos, centrado horizontalmente en la parte inferior.
+         2. 'switch_btn': Botón para cambiar entre cámaras, ubicado a la izquierda del botón de captura.
+         3. 'gallery_btn': Botón para acceder a la galería, posicionado a la derecha del botón de captura. -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
